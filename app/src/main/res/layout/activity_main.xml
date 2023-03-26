@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
    <LinearLayout
+       android:id="@+id/linear_menu"
        android:layout_width="match_parent"
        android:padding="8dp"
        android:layout_height="wrap_content">
@@ -32,6 +33,38 @@
 
    </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_menu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Olá, Kotlin!" />
+
+    <TextView
+        android:id="@+id/text_phrase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="@string/motivation_mensage" />
+    
+    <View
+        android:layout_width="128dp"
+        android:layout_height="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/text_phrase"
+        android:background="@color/black" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOVA FRASE"
+        android:layout_margin="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
 
 
-</LinearLayout>
+
+</RelativeLayout>

@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AppMotivation</string>
+    <string name="app_name">appMotivation</string>
+    <string name="motivation_mensage">Motivation Mensage</string>
 </resources>
