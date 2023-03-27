@@ -1,5 +1,6 @@
 package com.example.appmotivation
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -20,17 +21,28 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         supportActionBar?.hide()
 
         //Eventos
-        binding.buttonSaveName.setOnClickListener(this)
+        binding.buttonSave.setOnClickListener(this)
 
     }
 
     override fun onClick(view: View) {
-        if (view.id == R.id.buttonSaveName){
-            testeButtonUser()
+        if (view.id == R.id.button_save) {
+            handleSave()
         }
     }
-    private fun testeButtonUser(){
-        Toast.makeText(this, "Esse botão UserActivity foi clicado.", Toast.LENGTH_SHORT).show()
+
+    private fun handleSave() {
+        val name = binding.editName.text.toString()
+        if (name != "") {
+
+            SecurityPreferences(this).storeString("USER_NAME", name)
+
+            //Esse comando que faz a navegação entre as telas.
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        } else {
+            Toast.makeText(this, R.string.validation_mandatory_name, Toast.LENGTH_SHORT).show()
+        }
     }
 
 }

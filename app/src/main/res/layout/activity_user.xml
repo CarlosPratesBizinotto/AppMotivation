@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="@color/purple"
     tools:context=".UserActivity">
 
@@ -13,33 +14,35 @@
         android:layout_height="wrap_content"
         android:text="@string/lets_begin"
         android:textColor="@color/white"
-        android:textSize="35dp"
+        android:textSize="35sp"
         android:layout_marginTop="64dp"
         android:fontFamily="@font/cabin"
         android:gravity="top"
         android:layout_centerHorizontal="true" />
 
     <EditText
-        android:id="@+id/ed_name"
-        android:layout_width="wrap_content"
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/your_name"
-        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/tv_letsBegin"
-        android:layout_marginTop="250dp"
-        android:textSize="30dp"
-        android:fontFamily="@font/cabin" />
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/cabin"
+        android:hint="@string/your_name"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
 
     <Button
-        android:id="@+id/buttonSaveName"
+        android:id="@+id/button_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/save"
-        android:layout_below="@id/ed_name"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/light_purple"
-        android:layout_marginTop="200dp" />
+        android:backgroundTint="@color/light_purple" />
 
 
 

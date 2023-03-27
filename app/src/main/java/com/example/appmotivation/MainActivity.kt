@@ -16,8 +16,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-       //Esconder a barra de navegação
+        //Esconder a barra de navegação
         supportActionBar?.hide()
+
+        handleUserName()
 
         //Eventos
         binding.buttonNewPhrase.setOnClickListener(this)
@@ -25,12 +27,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
-        if (view.id == R.id.buttonNewPhrase){
-            testeButton()
+        if (view.id == R.id.buttonNewPhrase) {
+
         }
     }
-    
-     fun testeButton(){
-        Toast.makeText(this, "Esse botao Main foi clicado", Toast.LENGTH_SHORT).show()
+
+
+    fun handleUserName(){
+        val name = SecurityPreferences(this).getString("USER_NAME")
+        binding.textUserName.text = "Olá, $name!"
     }
 }
