@@ -62,7 +62,7 @@
         android:textSize="22sp" />
 
     <View
-        android:layout_width="128dp"
+        android:layout_width="300dp"
         android:layout_height="3dp"
         android:layout_below="@id/text_phrase"
         android:layout_centerHorizontal="true"
